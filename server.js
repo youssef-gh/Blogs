@@ -10,6 +10,8 @@ mongoose.connect('mongodb://localhost/blog', {
     useNewUrlParser: true, useUnifiedTopology: true
   })
 
+  // you should use methodOverride before the other 'app.use'
+app.use(methodOverride('_method')) 
 app.use(express.urlencoded({extended : false})) // this need to come first before routing !!!
 app.use('/articles',articleRouter)
 

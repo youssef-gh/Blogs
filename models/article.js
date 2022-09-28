@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
-const slugify = require('slugify')
+const slugify = require('slugify') // this for make the id looks good and make sense beside of id like '78836JKHFJKSQDF7'
+const marked = require('marked')
+
+
 const articleSchema = new mongoose.Schema({
     title: {
         type: String,
